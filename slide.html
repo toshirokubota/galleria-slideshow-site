@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="slideshow.js" defer></script>
+    
+  <title>Frontend Mentor | Galleria slideshow site</title>
+</head>
+<body>
+  <heading>
+    <div>
+      <img src="./assets/shared/logo.svg" alt="gallery logo" class="logo">
+    </div>
+    <nav>
+      <a href="slideshow.html" class="font-link1 uppercase">Stop slideshow</a>
+    </nav>
+  </heading>
+  <main class="slide">
+    <div id="slide" class="slide">
+        <div>
+          <picture id="picture">
+            <!-- <source srcset="" type="image/webp">
+            <img src="" alt="">           -->
+          </picture>
+          <button id="view-button" class="uppercase">view image</button>
+        </div>
+        <div>
+            <img id="artist-image"/>
+        </div>
+        <div>
+            <header>
+                <h1 class="picture-name">hello</h1>
+                <h2 class="artist-name">world</h2>
+            </header>  
+        </div>
+        <div id="year-painted"></div>
+        <div id="description" class="description">
+
+        </div>
+        <p><a id="go-to-source">go to source</a></p>
+    </div>
+    <div class="lightbox">
+      <img src="" alt="" id="lightbox-img">
+      <button id="close-button" class="uppercase">close</button>    
+    </div>
+    <footer>
+        <div>
+            <span class="picture-name"></span>
+            <span class="artist-name"></span>
+        </div>
+        <div>
+            <button id="back-button"><img src="./assets/shared/icon-back-button.svg" alt="back button"/></button>
+            <button id="next-button"><img src="./assets/shared/icon-next-button.svg" alt="next button"/></button>
+        </div>
+    </footer>
+  </main>
+</body>
+</html>
