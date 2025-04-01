@@ -15,18 +15,6 @@ const lightbox = document.getElementById('lightbox');
 const lightbox_img = document.getElementById('lightbox-img');
 const progress = document.getElementById('progress-bar');
 
-let index = 0;
-// Get the full URL (e.g., https://example.com?name=Toshiro&age=25)
-const url = window.location.href;
-
-// Create a URLSearchParams object
-const params = new URLSearchParams(new URL(url).search);
-
-// Read specific query parameters
-if(params.has('index')) {
-    index = parseInt(params.get('index'));
-}
-
 back_btn.addEventListener('click', ()=> {
     if(index > 0) {
         index = index - 1;
@@ -52,7 +40,7 @@ const populateSlide = (picture)=> {
     if(picture) {
         console.log(picture);
         picture_container.innerHTML = `
-            <source srcset="${picture.images.hero.large}" media="(min-width: 640px")>
+            <source srcset="${picture.images.hero.large}" media="(min-width: 720px")>
             <img src="${picture.images.hero.small}" alt="${picture.name}">          
         `
         description.innerText = picture.description;
@@ -87,5 +75,14 @@ const updateStates = () => {
     progress.value = index + 1;
 }
 
+let index = 0;
+// Get the full URL (e.g., https://example.com?name=Toshiro&age=25)
+const url = window.location.href;
+// Create a URLSearchParams object
+const params = new URLSearchParams(new URL(url).search);
+// Read specific query parameters
+if(params.has('index')) {
+    index = parseInt(params.get('index'));
+}
 populateSlide(pictures[index]);
-
+updateStates();

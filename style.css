@@ -170,6 +170,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem;
+  border-bottom: solid 1pt hsl(var(--color-black)/0.1);
 }
 .top-header img {
   max-height: 1.5rem;
@@ -245,10 +246,10 @@ progress {
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  height: 5px;
+  height: 15px;
   border: none;
   color: hsl(var(--color-light));
-  border-radius: 7px;
+  padding: 0;
 }
 
 progress::-webkit-progress-bar {
@@ -257,17 +258,14 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: purple;
+  background-color: hsl(var(--color-dark));
   height: 10px;
   border-radius: 5px;
-  margin-top: 2.5px;
 }
 
 progress::-moz-progress-bar {
-  background-color: purple;
+  background-color: hsl(var(--color-dark));
   height: 15px;
-  border-radius: 5px;
-  margin-top: 2.5px;
 }
 
 footer button[disabled=true] {
@@ -283,11 +281,11 @@ footer button:first-child {
 }
 .slide-page .caption-card {
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 .slide-page .caption-card > .year-painted {
   color: hsl(var(--color-dark)/0.5);
-  z-index: -2;
+  z-index: 0;
   color: hsl(var(--color-very-light));
   text-align: right;
 }
@@ -313,10 +311,7 @@ footer button:first-child {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr auto auto auto;
-  z-index: 1;
-}
-.slide-page .picture-card > * {
-  outline: solid 3pt red;
+  z-index: 2;
 }
 .slide-page .hero-picture {
   position: relative;
@@ -420,8 +415,8 @@ footer button:first-child {
   }
   .slide-page .picture-card {
     flex: 1 1 60%;
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
   }
   .slide-page .hero-picture {
     grid-column: 1/3;
@@ -431,7 +426,7 @@ footer button:first-child {
   .slide-page .picture-header {
     grid-column: 2/4;
     grid-row: 1/2;
-    width: 100%;
+    width: fit-content;
   }
   .slide-page .artist-image {
     grid-column: 3/4;
