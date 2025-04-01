@@ -14,51 +14,57 @@
   <title>Frontend Mentor | Galleria slideshow site</title>
 </head>
 <body>
-  <heading>
+  <header class="top-header">
     <div>
       <img src="./assets/shared/logo.svg" alt="gallery logo" class="logo">
     </div>
     <nav>
-      <a href="slideshow.html" class="font-link1 uppercase">Stop slideshow</a>
+      <a href="slide.html" class="font-link1 uppercase">Stop slideshow</a>
     </nav>
-  </heading>
-  <main class="slide">
+  </header>
+  <main class="slide-page">
     <div id="slide" class="slide">
-        <div>
+      <div class="picture-card">
+        <div class="hero-picture">
           <picture id="picture">
             <!-- <source srcset="" type="image/webp">
             <img src="" alt="">           -->
           </picture>
-          <button id="view-button" class="uppercase">view image</button>
+          <button id="view-button" class="view-button uppercase">
+            <img src="./assets/shared/icon-view-image.svg" alt="expansion icon"/>
+            view image
+          </button>
         </div>
-        <div>
-            <img id="artist-image"/>
-        </div>
-        <div>
-            <header>
-                <h1 class="picture-name">hello</h1>
-                <h2 class="artist-name">world</h2>
-            </header>  
-        </div>
-        <div id="year-painted"></div>
-        <div id="description" class="description">
-
-        </div>
-        <p><a id="go-to-source">go to source</a></p>
+        <header class="picture-header">
+          <h1 class="picture-name font-heading1">hello</h1>
+          <h2 class="artist-name font-subhead1">world</h2>
+        </header>
+        <img id="artist-image" class="artist-image"/>
+      </div>
+      <div class="caption-card">
+        <div id="year-painted" class="year-painted font-display"></div>
+        <article class="picture-article">
+          <p id="description" class="font-body"></p>
+          <div><a id="go-to-source" class="font-link2 uppercase">go to source</a></div>
+        </article>
+      </div>
     </div>
-    <div class="lightbox">
-      <img src="" alt="" id="lightbox-img">
-      <button id="close-button" class="uppercase">close</button>    
+    <div id="lightbox" class="lightbox">
+      <div class="lightbox-container">
+        <button id="close-button" class="close-button uppercase">close</button>    
+        <img src="" alt="" id="lightbox-img">  
+      </div>
     </div>
+    <progress id="progress-bar" max="15" min="0"></progress>
     <footer>
-        <div>
-            <span class="picture-name"></span>
-            <span class="artist-name"></span>
-        </div>
-        <div>
-            <button id="back-button"><img src="./assets/shared/icon-back-button.svg" alt="back button"/></button>
-            <button id="next-button"><img src="./assets/shared/icon-next-button.svg" alt="next button"/></button>
-        </div>
+      <div>
+          <p class="picture-name font-heading3"></p>
+          <p class="artist-name font-subhead2"></p>
+      </div>
+      <div>
+          <button id="back-button" class="back-button"><img src="./assets/shared/icon-back-button.svg" alt="back button"/></button>
+          <button id="next-button" class="next-button"><img src="./assets/shared/icon-next-button.svg" alt="next button"/></button>
+      </div>
     </footer>
   </main>
 </body>
