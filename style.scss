@@ -191,10 +191,10 @@ a {
     padding: 1rem 3rem;
 
     display: grid;
-    grid-gap: 2.5rem;
+    column-gap: 32px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: 10px;
-    grid-auto-flow: dense;
+    //grid-auto-flow: dense;
 
     // display: grid;
     // //grid-template-columns: repeat(4, 1fr); //repeat(auto-fill, minmax(300px, 1fr));;
@@ -219,7 +219,7 @@ a {
     figure > img {
         width: 100%; /* Make images responsive */
         height: auto; /* Maintain aspect ratio */
-        // padding-bottom: 20px;
+        //padding: 10px;
     }
     figurecaption {
         position: absolute;

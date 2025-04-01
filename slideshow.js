@@ -16,6 +16,16 @@ const lightbox_img = document.getElementById('lightbox-img');
 const progress = document.getElementById('progress-bar');
 
 let index = 0;
+// Get the full URL (e.g., https://example.com?name=Toshiro&age=25)
+const url = window.location.href;
+
+// Create a URLSearchParams object
+const params = new URLSearchParams(new URL(url).search);
+
+// Read specific query parameters
+if(params.has('index')) {
+    index = parseInt(params.get('index'));
+}
 
 back_btn.addEventListener('click', ()=> {
     if(index > 0) {
