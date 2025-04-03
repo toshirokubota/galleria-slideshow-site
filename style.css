@@ -209,11 +209,29 @@ body {
   width: 100%; /* Make images responsive */
   height: auto; /* Maintain aspect ratio */
 }
+.masonry-grid figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 1;
+}
+.masonry-grid figure:focus, .masonry-grid figure:hover {
+  cursor: pointer;
+}
+.masonry-grid figure:focus::after, .masonry-grid figure:hover::after {
+  background-color: rgba(255, 255, 255, 0.25);
+}
 .masonry-grid figurecaption {
   position: absolute;
   bottom: 30%;
   left: 10%;
   color: hsl(var(--color-white));
+  z-index: 2;
 }
 .masonry-grid figurecaption > span {
   display: block;

@@ -29,6 +29,8 @@ $desktop-break: 1248px; //78rem;
     /* break-points */
     --tablet-break: 720px; //45rem;
     --desktop-break: 1248px; //78rem;
+
+    //scroll-behavior: smooth;
 }
 
 /* ------------------- */
@@ -228,11 +230,29 @@ body {
         width: 100%; /* Make images responsive */
         height: auto; /* Maintain aspect ratio */
     }
+    figure::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        pointer-events: none; 
+        z-index: 1;
+    }
+    figure:focus, figure:hover {
+        cursor: pointer;
+    }
+    figure:focus::after, figure:hover::after {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
     figurecaption {
         position: absolute;
         bottom: 30%;
         left: 10%;
         color: hsl(var(--color-white));
+        z-index: 2;
     }
     figurecaption > span {
         display: block;

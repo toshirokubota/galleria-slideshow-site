@@ -75,8 +75,11 @@ const updateStates = () => {
     progress.value = index + 1;
 }
 
+/*
+Initial loading of the slide show
+*/
 let index = 0;
-// Get the full URL (e.g., https://example.com?name=Toshiro&age=25)
+// Get the full URL 
 const url = window.location.href;
 // Create a URLSearchParams object
 const params = new URLSearchParams(new URL(url).search);
