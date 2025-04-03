@@ -27,8 +27,6 @@
       <div class="picture-card">
         <div class="hero-picture">
           <picture id="picture">
-            <!-- <source srcset="" type="image/webp">
-            <img src="" alt="">           -->
           </picture>
           <button id="view-button" class="view-button uppercase font-link2">
             <img src="./assets/shared/icon-view-image.svg" alt="expansion icon"/>
@@ -37,15 +35,15 @@
         </div>
         <div class="picture-info">
           <header class="picture-header">
-            <h1 class="picture-name font-heading1">hello</h1>
-            <h2 class="artist-name font-subhead1">world</h2>
+            <h1 class="picture-name font-heading1"></h1>
+            <h2 class="artist-name font-subhead1"></h2>
           </header>
           <img id="artist-image" class="artist-image"/>  
         </div>
       </div>
       <div class="caption-card">
         <div id="year-painted" class="year-painted font-display"></div>
-        <article class="picture-article">
+        <article class="picture-detail">
           <p id="description" class="font-body"></p>
           <!-- <div> -->
             <a id="go-to-source" class="font-link2 uppercase">go to source</a>
@@ -56,10 +54,10 @@
     <div id="lightbox" class="lightbox">
       <div class="lightbox-container">
         <button id="close-button" class="close-button uppercase">close</button>    
-        <img src="" alt="" id="lightbox-img">  
+        <img src="" alt="expanded view" id="lightbox-img">  
       </div>
     </div>
-    <progress id="progress-bar" max="15" min="0"></progress>
+    <progress id="progress-bar" max="15" min="0" aria-hidden="true"></progress>
     <footer>
       <div>
           <p class="picture-name font-heading3"></p>
