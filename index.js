@@ -37,7 +37,7 @@ for(let i=0; i<pictures.length; ++i) {
 }
 
 figmap.forEach((value, key) => {
-  console.log(key, value);
+  //console.log(key, value);
   key.addEventListener('click', () => {
     window.open(`./slide.html?index=${value}`, '_self');
   })

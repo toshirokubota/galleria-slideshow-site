@@ -232,20 +232,18 @@ body {
 
 .lightbox.shown {
   display: block;
+  overflow: scroll;
 }
 
 .lightbox-container {
   display: grid;
   grid-template-rows: auto 1fr;
-  padding: 1rem;
-  overflow: scroll;
+  padding: 2rem;
   justify-content: center;
   align-content: center;
 }
 .lightbox-container img {
   object-fit: contain;
-  flex-grow: 1;
-  width: fit-content;
 }
 
 .close-button {
